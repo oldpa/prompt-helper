@@ -47,7 +47,12 @@ function autoGrow(element) {
 function handleInput(event) {
   const textarea = event.target;
   autoGrow(textarea);
-  const cell = textarea.parentElement.parentElement;
+  let cell = textarea.parentElement;
+  console.log(cell, cell.nodeName);
+  if (cell.nodeName === "DIV") {
+    cell = cell.parentElement;
+  }
+
   const row = cell.parentElement;
   const table = row.parentElement;
   console.log(table);
