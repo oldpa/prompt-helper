@@ -84,6 +84,10 @@ function addColumn(prompt) {
     }
     
   }
+  if (table.rows[0].cells.length > 3) {
+    let increaseWidth = 95 + (table.rows[0].cells.length - 3) * 40;
+        table.style.width = increaseWidth + '%';
+  }
 }
 
 function runPrompts() {

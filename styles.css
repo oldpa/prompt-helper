@@ -8,14 +8,20 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
+h1 {
+  margin-left: 130px;
+}
+.table-container {
+  padding: 20px;
+}
 td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: center;
   vertical-align: middle;
+  min-width: 40%;
 }
-td.variation {
+td:first-child {
   min-width: 100px;
 }
 
@@ -48,7 +54,7 @@ textarea {
   margin-right: auto;
 }
 #apiKeyContainer {
-  top: 10px;
+  top: 20px;
   right: 100px;
   position: absolute;
 }

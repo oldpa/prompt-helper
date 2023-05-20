@@ -8,19 +8,24 @@
 </head>
 <body>
     <a style='position:absolute; top:0px;' href="https://github.com/oldpa/prompt-explorer"><img decoding="async" loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_green_007200.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-    <button id="runButton" onclick="">Run</button>
-    <div id="apiKeyContainer">
-    <label for="apiKey">OpenAI API key</label>
-    <input type="password" id="apiKey" placeholder="OpenAI API Key" />
-    </div>
-    <table id="gridTable">
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td><textarea oninput="">Writing chatgpt prompt helper</textarea></td>
-        </tr>
-    </table>
+    <head>
+        <h1>AI Prompt Optimizer</h1>
+        <button id="runButton" onclick="">Run</button>
+        <div id="apiKeyContainer">
+        <label for="apiKey">OpenAI API key</label>
+        <input type="password" id="apiKey" placeholder="OpenAI API Key" />
+        </div>
+    </head>
+    <section class="table-container">
+        <table id="gridTable">
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td><textarea oninput="">Writing chatgpt prompt helper</textarea></td>
+            </tr>
+        </table>
+    </section>
     <script src="cache.js"></script>
     <script src="script.js"></script>
     <script src="openai.js"></script>
