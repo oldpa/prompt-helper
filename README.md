@@ -2,6 +2,8 @@
 
 ChatGPT Prompt helper is a simple, vanilla JavaScript HTML app that allows you to test multiple variations of AI prompts in one go. It uses a grid-like interface where each row represents a different test case, and the columns hold variations of the AI prompts. The app enables real-time editing and processing of these prompts and test cases. This project uses zero external dependencies.
 
+**You can try the tool at https://oldpa.github.io/prompt-helper/**
+
 ## Table of Contents
 
 - [Features](#features)
