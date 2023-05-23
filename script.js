@@ -118,8 +118,8 @@ function runPrompts() {
   }
   for (let i = 1; i < table.rows.length; i++) {
     for (let j = 1; j < table.rows[0].cells.length; j++) {
-      const prompt = table.rows[0].cells[j].firstChild.firstChild.value;
-      const model = table.rows[0].cells[j].firstChild.lastChild.value;
+      const prompt = table.rows[0].cells[j].querySelector('textarea').value;
+      const model = table.rows[0].cells[j].querySelector('select').value;
       const variation = table.rows[i].cells[0].firstChild.value;
       if (prompt === "" || variation === "") continue;
       const output = prompt.replace("{{ variation }}", variation);
