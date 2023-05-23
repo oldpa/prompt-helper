@@ -22,6 +22,7 @@ function createPromptCell(prompt) {
   cell.appendChild(div);
   div.appendChild(textarea);
   div.appendChild(getModelPicker());
+  div.appendChild(getCopyButton(textarea));
   return cell;
 }
 
@@ -39,6 +40,25 @@ function getModelPicker() {
   select.appendChild(option1);
   select.appendChild(option2);
   return select;
+}
+function getCopyButton(elementToCopy) {
+  const button = document.createElement("button");
+  button.innerHTML = "Copy";
+  button.addEventListener('click', function() {
+    var text = elementToCopy.value.replace(/\n/g, '\\n');  // replace newlines with \n
+
+    // Create a temporary input element to hold the text for copying
+    var tempInput = document.createElement("input");
+    document.body.appendChild(tempInput);
+    tempInput.value = text;
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    // Change button text to "copied"
+    this.textContent = 'Copied';
+  });
+return button;
 }
 function autoGrow(element) {
   element.style.height = "auto"; // Reset height so that scrollHeight returns the correct value
