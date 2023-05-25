@@ -19,7 +19,8 @@ td {
   padding: 8px;
   text-align: center;
   vertical-align: middle;
-  min-width: 40%;
+  width: 30%;
+  height: 300px;
 }
 td:first-child {
   min-width: 100px;
@@ -36,6 +37,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 #runButton {

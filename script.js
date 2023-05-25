@@ -66,17 +66,13 @@ function autoGrow(element) {
 }
 function handleInput(event) {
   const textarea = event.target;
-  autoGrow(textarea);
   let cell = textarea.parentElement;
-  console.log(cell, cell.nodeName);
   if (cell.nodeName === "DIV") {
     cell = cell.parentElement;
   }
 
   const row = cell.parentElement;
   const table = row.parentElement;
-  console.log(table);
-  console.log(row.rowIndex, cell.cellIndex, table.rows[0].cells.length - 1, table);
   if (row.rowIndex === 0 && cell.cellIndex === table.rows[0].cells.length - 1) {
     addColumn();
   } else if (cell.cellIndex === 0 && row.rowIndex === table.rows.length - 1) {
@@ -132,7 +128,6 @@ function runPrompts() {
 document.addEventListener("DOMContentLoaded", () => {
   const runButton = document.getElementById("runButton");
   runButton.addEventListener("click", runPrompts);
-  console.log('hej')
   addRow();
   let startPrompt = "Create a title for a blog post about {{ variation }}";
   addColumn(startPrompt);
